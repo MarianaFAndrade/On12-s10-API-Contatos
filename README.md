@@ -1,15 +1,15 @@
-# API REST DE RECEITAS
+# API REST DE CONTATOS
 
 Demandas de negócio
 
 - Rota principal pra visualizar a apresentação do projeto [ok]
-- Visualizar todas as receitas [ok]
-- Visualizar as receitas por nome [ok]
-- Vsualizar as receitas por id [ok]
-- Adicionar uma nova receita [ok]
-- Alterar os dados de uma receita [ok]
-- Atualizar o nome de uma receita [ok] 
-- Deletar uma receita [ok]
+- Visualizar todos os contatos [ok]
+- Visualizar os contstos por nome [ok]
+- Vsualizar os contatos por id [ok]
+- Adicionar um novo contato [ok]
+- Alterar os dados de um contato [ok]
+- Atualizar o nome de um contato [ok] 
+- Deletar um contato [ok]
 
 
 ## API Reference
@@ -22,65 +22,65 @@ Demandas de negócio
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `Receitas` | `String` | **Required**. Todas as Receitas |
+| `Contatos` | `String` | **Required**. All Contacts |
 
 #### Get name
 
 ```http
-  GET /receitas/nome
+  GET /contatos/nome
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Nome`      | `String` | **Required**. Nomes das Receitas |
+| `Nome`      | `String` | **Required**. Contacts names |
 
 #### Get Id
 
 ```http
-  GET /receitas/porcao${id}
+  GET /contatos/${id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Id`      | `Number` | **Required**. Buscar receitas por porções|
+| `Id`      | `Number` | **Required**. Id of item |
 
-#### Add Recipes
+#### Add Contacts
 
 ```http
-  POST /receitas/cadastrar
+  POST /contatos/cadastrar
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Cadastrar`      | `String` | **Required**. Cadastrar nova Receita |
+| `Cadastrar`      | `String` | **Required**. Add name, cell and instargram |
 
-#### Change recipe data
+#### Replace contacts infos
 
 ```http
-  PUT /receitas/substituir${id}
+  PUT /substituir${id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Substituir`      | `String` | **Required**. Substituir informações da receita |
+| `Substituir`      | `String` | **Required**. Replace name, cell and instargram |
 
-#### Change recipe name
+#### Replace contacts name
 
 ```http
-  PATCH /receitas/substituir/nome${id}
+  PATCH /substituir/nome${id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Substituir`      | `String` | **Required**. Substituir nome de uma receita|
+| `Substituir`      | `String` | **Required**. Replace name|
 
 
-#### Delete recipe
+#### Delete Contacts
 
 ```http
-  DELETE /receitas/delete
+  DELETE /contatos/delete
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Id`      | `Number` | **Required**. Deletar receitas por ID|
+| `Id`      | `Number` | **Required**. Delete contacts by Id |
